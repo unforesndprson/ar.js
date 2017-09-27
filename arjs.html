@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+	<style></style>
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded artoolkit='sourceType: webcam;'>
+        <a-sphere src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497615688&di=224737f5c29be321161a31610e7f4cad&src=http://img.25pp.com/uploadfile/youxi/images/2014/0415/20140415084756534.jpg" radius="1" segments-height="53">
+				<a-animation attribute="scale"
+
+					dur="1000"
+					form="1 1 1"
+					to="2 2 2"
+					direction="alternate-reverse"
+					easing="ease-in-out-cIrc"
+					repeat="indefinite"></a-animation>
+
+        </a-sphere>
+        <!-- <a-marker-camera preset='hiro'></a-marker-camera> -->
+        <a-marker-camera type='pattern' patternUrl='path/pattern-marker.patt'></a-marker-camera>
+        <a-marker type='pattern' patternUrl='path/pattern-marker.patt'></a-marker>
+
+    </a-scene>
+</body>
+
+</html>
